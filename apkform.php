@@ -73,10 +73,8 @@ $file = "apkform.txt";
 if(file_exists($file) && filesize($file) > 0){
     $lines = file($file, FILE_IGNORE_NEW_LINES);
 
-    // cek apakah ada keyword
     $keyword = isset($_GET['keyword']) ? strtolower(trim($_GET['keyword'])) : "";
 
-    // filter hasil berdasarkan nama
     $filtered = [];
     foreach($lines as $line){
         $parts = explode("|", $line);
@@ -123,3 +121,4 @@ if(file_exists($file) && filesize($file) > 0){
 </div>
 </body>
 </html>
+
